@@ -46,7 +46,7 @@ jobs:
                                      --github-token=${{github.token}} \
                                      --pull-request=${{github.event.pull_request.number}} \
                                      --behavior=update  \
-                                     --policy-path infracost-policy.rego   
+                                     --policy-path=.github/workflows/infracost-policy.rego
       - name: Slack output
         run: |
             infracost output --path /tmp/infracost.json --format slack-message --out-file /tmp/slack.json
