@@ -3,9 +3,11 @@
 
 terraform {
   
-  backend "s3" {
-      bucket    = ""
-      key       = "terraform/*.tfstate"
-      region    = ""
-  }
+  backend "local" {}
+
+  #backend "s3" {
+  #    bucket    = ""
+  #    key       = "terraform/*.tfstate"
+  #    region    = ""
+  #}
 }
